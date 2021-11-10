@@ -2,7 +2,7 @@
 
 
 
-# git remote add origin git@github.com:marrold/terraform-rfc2136-dns-yaml.git
+# terraform-rfc2136-dns-yaml
 
 terraform-rfc2136-dns-yaml is a terraform configuration for updating DNS records using RFC 2136. It uses the native [DNS Prvoider](https://registry.terraform.io/providers/hashicorp/dns/latest/docs) from Terraform.
 
