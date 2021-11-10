@@ -2,7 +2,7 @@
 
 
 
-# terraform-rfc2136-dns-yaml
+# git remote add origin git@github.com:marrold/terraform-rfc2136-dns-yaml.git
 
 terraform-rfc2136-dns-yaml is a terraform configuration for updating DNS records using RFC 2136. It uses the native [DNS Prvoider](https://registry.terraform.io/providers/hashicorp/dns/latest/docs) from Terraform.
 
@@ -43,7 +43,7 @@ As well as importing the module you'll also need to configure the provider.
 -  **server**:  A list of paths to directories containing YAML files ( [See Zone Directories](####-Zone-Directories) )  [Mandatory]
 -  **key_name**: The default TTL to use if it's not supplied at the record level. If ommited from the module, it'll default to 3600 [Optional]
 -  **key_algorithm**: The default TTL to use if it's not supplied at the record level. If ommited from the module, it'll default to 3600 [Optional]
--   **key_secret**: The default TTL to use if it's not supplied at the record level. If ommited from the module, it'll default to 3600 [Optional]
+-  **key_secret**: The default TTL to use if it's not supplied at the record level. If ommited from the module, it'll default to 3600 [Optional]
 
 Your .tf should look something like this:
 
@@ -122,11 +122,8 @@ ttl: 50
 ##### Options
 
 -  **name**: The record name / domain. [Mandatory]
-
 -  **records**: A list of entries to add for this record. [Mandatory]
-
 -  **type**:  The type of this record. In this case its `a`. [Mandatory]
-
 -  **ttl**: The TTL for this record. [Optional, see Module usage for defaults]
 
 
@@ -146,11 +143,8 @@ ttl: 300
 ##### Options
 
 -  **name**: The record name / domain. [Mandatory]
-
 -  **records**: A list of entries to add for this record. [Mandatory]
-
 -  **type**:  The type of this record. In this case its `aaaa`. [Mandatory]
-
 -  **ttl**: The TTL for this record. [Optional, see Module usage for defaults]
 
 
@@ -168,11 +162,8 @@ ttl: 300
 ##### Options
 
 -  **name**: The record name / domain. [Mandatory]
-
 -  **cname**: The FQDN to return as the CNAME. [Mandatory]
-
 -  **type**:  The type of this record. In this case its `cname`. [Mandatory]
-
 -  **ttl**: The TTL for this record. [Optional, see Module usage for defaults]
 
 #### MX Records
@@ -191,11 +182,8 @@ name: mx
 ##### Options
 
 -  **name**: The record name / domain. [Mandatory]
-
 -  **records**: A dictionary of dictionaries, specifying the `exchange` and `preference`.  [Mandatory]
-
 -  **type**:  The type of this record. In this case its `mx`. [Mandatory]
-
 -  **ttl**: The TTL for this record. [Optional, see Module usage for defaults]
 
 #### NS Records
