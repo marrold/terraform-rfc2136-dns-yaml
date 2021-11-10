@@ -1,0 +1,9 @@
+--- 
+subdomain.example.org:
+  - 
+    name: www
+    records: 
+      - "10.0.130.1"
+      - "192.168.1.1"
+    type: a
+    ttl: 50

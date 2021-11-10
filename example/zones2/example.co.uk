@@ -1,0 +1,16 @@
+--- 
+example.co.uk:
+  -
+    name: "*" # Due to the way YAML handles an asterisk, a wildcard must be in quotes, or other records will be destroyed.
+    records: 
+      - "10.0.130.1"
+      - "192.168.1.1"
+    type: a
+    ttl: 50
+  - 
+    name: www
+    records: 
+      - "10.0.130.1"
+      - "192.168.1.1"
+    type: a
+    ttl: 50

@@ -1,0 +1,77 @@
+--- 
+example.org:
+  -
+    name: "*" # Due to the way YAML handles an asterisk, a wildcard must be in quotes, or other records will be destroyed.
+    records: 
+      - "10.0.130.1"
+      - "192.168.1.1"
+    type: a
+    ttl: 50
+  - 
+    name: a
+    records: 
+      - "10.0.130.1"
+      - "192.168.1.1"
+    type: a
+    ttl: 50
+  - 
+    name: aaaa
+    records: 
+      - "fdd5:e282:43b8:5303:dead:beef:cafe:babe"
+    type: aaaa
+  - 
+    name: smptp1
+    records: 
+      - "10.0.130.1"
+    type: a
+    ttl: 300
+  - 
+    name: smptp2
+    records: 
+      - "fdd5:e282:43b8:5303:dead:beef:cafe:babe"
+      - "fdd5:e282:43b8:5303:cafe:babe:dead:beef"
+    ttl: 300
+    type: aaaa
+  - 
+    name: cname
+    cname: example.org
+    ttl: 300
+    type: cname
+  - 
+    name: mx
+    records: 
+      smptp1.example.org: 
+        preference: 20
+      smptp2.example.org: 
+        preference: 10
+    ttl: 300
+    type: mx
+  - 
+    name: ns
+    records: 
+      - ns1.example.org
+      - ns2.example.org
+    type: ns
+  - 
+    name: ptr
+    ptr: example.org
+    type: ptr
+  - 
+    name: _sip._tcp
+    records: 
+      sip1.example.org.: 
+        port: 5060
+        priority: 10
+        weight: 60
+      sip2.example.org.: 
+        port: 5061
+        priority: 10
+        weight: 60
+    ttl: 1000
+    type: srv
+  - 
+    name: txt
+    records: 
+      - "txt record"
+      - "other txt record"
+    type: txt

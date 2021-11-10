@@ -1,0 +1,9 @@
+# Configure the DNS Provider
+provider "dns" {
+  update {
+    server        = "10.0.144.4"
+    key_name      = "update."
+    key_algorithm = "hmac-sha256"
+    key_secret    = "u/ULUGT0p7GPnpXYEVkWztv3fKi5hURD9PyJnvqMhZQ="
+  }
+}
