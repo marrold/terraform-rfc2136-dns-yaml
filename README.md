@@ -10,7 +10,7 @@ terraform-rfc2136-dns-yaml is a terraform configuration for updating DNS records
 
 - Due to the abstraction layer between Terraform and the yaml files, errors may be difficult to troubleshoot.
 - The module assumes all zones share the same server and authentication keys. If you have multiple servers and/or keys you'll need to use the module multiple times with a different provider for each.
-
+- I've only tested the module on Terraform version 0.15.5
 ## Usage
 
 ## Importing the Module 
