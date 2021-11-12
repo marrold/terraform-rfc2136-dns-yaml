@@ -1,5 +1,5 @@
 output "compiled_records" {
-  value = module.dns.created_a_records
+  value = module.dns.compiled_records
 }
 
 output "compiled_a_records" {
